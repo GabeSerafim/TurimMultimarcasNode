@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const multer = require("multer");
 
 const root = require('./utils/path');
 const sequelize = require('./utils/database');
@@ -35,3 +36,15 @@ sequelize.sync()
     app.listen(8080)
 })
 .catch(err => console.log(err));
+
+const storage = multer.diskStorage({
+    destination: (req, file, callBack) =>{
+        callBack(null,'assets')
+    },
+    filename: (req, file, callBack) =>{
+        console.log(req);
+        callBack(null, file.fieldname+`-ID-`+file.originalname)
+    }
+})
+
+var upload = multer({storage:storage})

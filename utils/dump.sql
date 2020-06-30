@@ -31,10 +31,9 @@ CREATE TABLE IF NOT EXISTS carro (
 	aceitaTrocas BOOLEAN,
 	unicoDono BOOLEAN,
 	preco LONG,
-	image TEXT,
 	estadoFinanceiro INT,
 	cep VARCHAR(255),
     PRIMARY KEY (id)
 );
-INSERT INTO `carro` VALUES (1,"Uno Básico","documentos em di 2020 pago em meu nome dut em branco só tranferir.ótimo carro pra andar nada pra fazer só algumas sicatriz de uso.","IMO-7480","FIAT","Uno","2011",null,"Manual","Gasolina","Hidraulica","1.0",null,89000,2,0,"preto",false,false,false,false,false,true,false,false,false,false,false,true,10900,null,1,93216080),
-						   (2,"Uno Básico","documentos em di 2020 pago em meu nome dut em branco só tranferir.ótimo carro pra andar nada pra fazer só algumas sicatriz de uso.","IED-4455","FIAT","Uno","2008",null,"Manual","Gasolina","Hidraulica","1.0",null,98000,4,5,"branco",false,false,false,false,false,true,false,false,false,false,false,true,10900,null,1,93216080);
+INSERT INTO `carro` VALUES (1,"Uno Básico","documentos em di 2020 pago em meu nome dut em branco só tranferir.ótimo carro pra andar nada pra fazer só algumas sicatriz de uso.","IMO-7480","FIAT","Uno","2011",null,"Manual","Gasolina","Hidraulica","1.0",null,89000,2,0,"preto",false,false,false,false,false,true,false,false,false,false,false,true,10900,1,93216080),
+						   (2,"Uno Básico","documentos em di 2020 pago em meu nome dut em branco só tranferir.ótimo carro pra andar nada pra fazer só algumas sicatriz de uso.","IED-4455","FIAT","Uno","2008",null,"Manual","Gasolina","Hidraulica","1.0",null,98000,4,5,"branco",false,false,false,false,false,true,false,false,false,false,false,true,10900,1,93216080);
