@@ -52,7 +52,6 @@ exports.addCarro = (req, res, next) => {
         aceitaTrocas: req.body.aceitaTrocas,
         unicoDono: req.body.unicoDono,
         preco: req.body.preco,
-        image: req.body.image,
         estadoFinanceiro: req.body.estadoFinanceiro,
         cep: req.body.cep,
     })
@@ -61,6 +60,15 @@ exports.addCarro = (req, res, next) => {
         err.statusCode = 500;
         next(err);
     });
+}
+
+exports.addCarro = (req, res, next) => {
+    const errors = validationResult(req);
+    if(!errors.isEmpty()){
+        const error = new Error('Validation failed, entered data is incorrect');
+        error.statusCode = 422;
+        throw error;
+    }
 }
 
 exports.getById = (req, res, next) => {
@@ -118,7 +126,6 @@ exports.putCarro = (req, res, next) => {
             carro.aceitaTrocas= req.body.aceitaTrocas
             carro.unicoDono= req.body.unicoDono
             carro.preco= req.body.preco
-            carro.image= req.body.image
             carro.estadoFinanceiro= req.body.estadoFinanceiro
             carro.cep= req.body.cep
             return carro.save();

@@ -103,9 +103,6 @@ const Carro = sequelize.define('carro', {
     preco: {
         type: Sequelize.BIGINT
     },
-    image: {
-        type: Sequelize.TEXT
-    },
     estadoFinanceiro: {
         type: Sequelize.INTEGER
     },
