@@ -33,6 +33,9 @@ app.use((error, req, res, next) => {
 })
 sequelize.sync()
 .then(result => {
-    app.listen(8080)
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`Our app is running on port ${ PORT }`);
+    });
 })
 .catch(err => console.log(err));
