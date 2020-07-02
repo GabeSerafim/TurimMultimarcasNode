@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('turimmultimarcas','root','',{
+const sequelize = new Sequelize('sql10352175','sql10352175','fSGsUxT2nf',{
     dialect: 'mysql',
-    host:'localhost',
+    host:'sql10.freemysqlhosting.net',
     define: {
         timestamps: false,
         freezeTableName: true,

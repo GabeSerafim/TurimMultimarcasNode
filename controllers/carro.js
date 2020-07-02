@@ -62,7 +62,7 @@ exports.addCarro = (req, res, next) => {
     });
 }
 
-exports.addCarro = (req, res, next) => {
+exports.addImage = (req, res, next) => {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
         const error = new Error('Validation failed, entered data is incorrect');

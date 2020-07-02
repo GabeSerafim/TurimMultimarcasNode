@@ -36,15 +36,3 @@ sequelize.sync()
     app.listen(8080)
 })
 .catch(err => console.log(err));
-
-const storage = multer.diskStorage({
-    destination: (req, file, callBack) =>{
-        callBack(null,'assets')
-    },
-    filename: (req, file, callBack) =>{
-        console.log(req);
-        callBack(null, file.fieldname+`-ID-`+file.originalname)
-    }
-})
-
-var upload = multer({storage:storage})
